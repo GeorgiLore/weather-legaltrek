@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<div class="left-column" style="float: left;">
+			<div id="weather-container" style="width: 500px; height: 250px; border: 1px solid #000;">
+				<?php include('weather-box.html'); ?>
+			</div>
+			
+			<br/>
+			
+			<div id="locations">
+				<select id="location">
+					<option <?php echo ($woeId == '839722')?'selected':''; ?> value='839722'>Sofia</option>
+					<option <?php echo ($woeId == '2379574')?'selected':''; ?> value='2379574'>Chicago</option>
+					<option <?php echo ($woeId == '615702')?'selected':''; ?> value='615702'>Paris</option>
+					<option <?php echo ($woeId == '1118370')?'selected':''; ?> value='1118370'>Tokyo</option>
+				</select>
+				<button id='addFav'>
+					Add to Favourites
+				</button>
+			</div>
+		</div>
+		<div class="right-column" style="float: left; margin-left: 20px;">
+			<div id="fave-list">
+				
+			</div>
+		</div>
+	</body>
+</html>

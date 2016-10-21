@@ -1,0 +1,38 @@
+<div style="float: left; width: 100%;">
+	<?php echo $result->location->city; ?>
+</div>
+<div style="float: left; width: 100%;">
+	<?php echo substr($result->item->condition->date, 0, 3); ?>
+</div>
+<div style="float: left; width: 100%;">
+	<?php echo $result->item->condition->text; ?>
+</div>
+<div style="float: left;">
+	<img src="http://l.yimg.com/a/i/us/we/52/<?php echo $result->item->condition->code; ?>.gif" /> <?php echo $result->item->condition->temp . ' ' . $result->units->temperature; ?>
+</div>
+<div style="float: right;">
+	Precipitation: 0%
+</div>
+<div style="clear: right;"></div>
+<div style="float: right;">
+	Humidity: <?php echo $result->atmosphere->humidity; ?>%
+</div>
+<div style="clear: right;"></div>
+<div style="float: right;">
+	Wind: <?php echo $result->wind->speed . ' ' . $result->units->speed; ?>
+</div>
+<div style="clear: both;"></div>
+<div style="float: left; margin-top: 15px;">
+<?php foreach($result->item->forecast as $key => $item) { 
+		if($key > 0){
+?>
+	<div class="forecast-element" style="float: left; border: 1px solid grey; margin-left: 1px;">
+		<?php echo $weekDays[date('w', strtotime($item->date))]; ?><br/>
+		<img src="http://l.yimg.com/a/i/us/we/52/<?php echo $item->code;?>.gif" /><br/>
+		<?php echo $item->high;?> <?php echo $item->low;?>
+	</div>
+<?php
+		}	
+	} 
+?>
+</div>

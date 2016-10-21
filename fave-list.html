@@ -1,0 +1,4 @@
+<h2>Favourites</h2>
+<?php foreach($result as $item){ ?>
+<?php echo $item['location']; ?> <a href="javascript: void(0);" class='delFav' woeid="<?php echo $item['woeid']; ?>" title="Remove from Favourites">X</a><br/>
+<?php } ?>
