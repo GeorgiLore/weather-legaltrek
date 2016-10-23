@@ -2,15 +2,14 @@
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="main.js"></script>
+		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
-		<div class="left-column" style="float: left;">
-			<div id="weather-container" style="width: 500px; height: 250px; border: 1px solid #000;">
+		<div class="left-column">
+			<div id="weather-container">
 				<?php include('weather-box.html'); ?>
 			</div>
-			
-			<br/>
-			
+			<div style='clear: both;'></div>			
 			<div id="locations">
 				<select id="location">
 					<option <?php echo ($woeId == '839722')?'selected':''; ?> value='839722'>Sofia</option>
@@ -23,7 +22,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="right-column" style="float: left; margin-left: 20px;">
+		<div class="right-column">
 			<div id="fave-list">
 				
 			</div>

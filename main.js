@@ -9,21 +9,31 @@ function getFaves(){
 	});
 }
 
+function changeMainWeather(id){
+	$.ajax({
+		url: 'getWeather.php',
+		type: 'POST',
+		data: {woeId: id},
+		dataType: 'json',
+		success: function(response){
+			$('#weather-container').html(response.content);
+		}
+	});
+}
+
 
 $(document).ready(function(){
 	getFaves();
 
 	$('#location').change(function(){
 		var id = $(this).val();
-		$.ajax({
-			url: 'getWeather.php',
-			type: 'POST',
-			data: {woeId: id},
-			dataType: 'json',
-			success: function(response){
-				$('#weather-container').html(response.content);
-			}
-		});
+		changeMainWeather(id);
+	});
+	
+	$(document).on('click', '.fave-location', function(){
+		var id = $(this).attr('woeid');
+		changeMainWeather(id);
+		$('#location').val(id);
 	});
 	
 	$('#addFav').click(function(){

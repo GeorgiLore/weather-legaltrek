@@ -1,4 +1,10 @@
 <h2>Favourites</h2>
 <?php foreach($result as $item){ ?>
-<?php echo $item['location']; ?> <a href="javascript: void(0);" class='delFav' woeid="<?php echo $item['woeid']; ?>" title="Remove from Favourites">X</a><br/>
+<div style="float: left; width: 100px; height: 20px;">
+	<a href="javascript: void(0);" class="fave-location" woeid="<?php echo $item['woeid']; ?>"><?php echo $item['location']; ?></a>
+</div>
+<div style="float: left; height: 20px; padding-top: 3px;">
+	<a href="javascript: void(0);" class='delFav' woeid="<?php echo $item['woeid']; ?>" title="Remove from Favourites">X</a><br/>
+</div>
+<div style="clear: both;"></div>
 <?php } ?>

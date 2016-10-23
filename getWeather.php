@@ -1,13 +1,34 @@
 <?php
 
 	$weekDays = array(
-		0 => 'Sun',
-		1 => 'Mon',
-		2 => 'Tue',
-		3 => 'Wed',
-		4 => 'Thu',
-		5 => 'Fri',
-		6 => 'Sat',
+		0 => array(
+			'short_title' => 'Sun',
+			'long_title' => 'Sunday'
+		),
+		1 => array(
+			'short_title' => 'Mon',
+			'long_title' => 'Monday'
+		),
+		2 => array(
+			'short_title' => 'Tue',
+			'long_title' => 'Tuesday'
+		),
+		3 => array(
+			'short_title' => 'Wed',
+			'long_title' => 'Wednesday'
+		),
+		4 => array(
+			'short_title' => 'Thu',
+			'long_title' => 'Thursday'
+		),
+		5 => array(
+			'short_title' => 'Fri',
+			'long_title' => 'Friday'
+		),
+		6 => array(
+			'short_title' => 'Sat',
+			'long_title' => 'Saturday'
+		),
 	);
 
 	$woeId = 839722;

@@ -1,0 +1,79 @@
+body {
+	font-family: Arial;
+	color: #9f9f9f;
+}
+
+body a {
+	font-family: Arial;
+	color: #9f9f9f;
+	text-decoration: none;
+}
+
+body a:hover {
+	font-family: Arial;
+	color: #9f9f9f;
+	text-decoration: underline;
+}
+
+.left-column {
+	float: left;
+	width: 600px;
+	padding: 15px;
+	border: 1px solid #9f9f9f;
+}
+
+#locations {
+	margin-top: 15px;
+}
+
+#forecast {
+	float: left;
+	margin-top: 15px;
+}
+
+.forecast-element {
+	float: left;
+	width: 63px;
+	border: 1px solid #fff;
+	padding: 5px;
+}
+
+#forecast .active {
+	background-color: #efefef;
+	border: 1px solid #dfdfdf;
+}
+
+.right-column {
+	float: left;
+	margin-left: 20px;
+}
+
+.delFav {
+	color: red;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.delFav:hover {
+	color: red;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+#addFav {
+	float: right;
+	background-color: blue;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	padding: 5px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#location {
+	width: 200px;
+	height: 20px;
+	border: 1px solid #909090;
+	border-radius: 3px;
+}
