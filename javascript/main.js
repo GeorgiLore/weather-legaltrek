@@ -1,7 +1,8 @@
 function getFaves(){
 	$.ajax({
-		url: 'models/getFavourites.php',
+		url: 'ajax/getData.php',
 		type: 'POST',
+		data: {data_class: 'Favourite', data_method: 'getFavourites'},
 		dataType: 'json',
 		success: function(response){
 			$('#fave-list').html(response.content);
