@@ -48,19 +48,19 @@ body a:hover {
 	margin-left: 20px;
 }
 
-.delFav {
+.delFavourite {
 	color: red;
 	font-size: 12px;
 	text-decoration: none;
 }
 
-.delFav:hover {
+.delFavourite:hover {
 	color: red;
 	font-size: 12px;
 	text-decoration: none;
 }
 
-#addFav {
+#addFavourite {
 	float: right;
 	background-color: blue;
 	color: #fff;

@@ -37,13 +37,13 @@ $(document).ready(function(){
 		$('#location').val(id);
 	});
 	
-	$('#addFav').click(function(){
+	$('#addFavourite').click(function(){
 		var id = $('#location').val();
 		var location = $('#location option:selected').text();
 		$.ajax({
-			url: 'models/favourites-add-delete.php',
+			url: 'ajax/crud.php',
 			type: 'POST',
-			data: {woeId: id, location: location, type: 'add'},
+			data: {woeId: id, location: location, type: 'add', data_class: 'Favourite'},
 			dataType: 'json',
 			success: function(response){
 				if(response.success){
@@ -55,12 +55,12 @@ $(document).ready(function(){
 		});
 	});
 	
-	$(document).on('click', '.delFav', function(){
+	$(document).on('click', '.delFavourite', function(){
 		var id = $(this).attr('woeid');
 		$.ajax({
-			url: 'models/favourites-add-delete.php',
+			url: 'ajax/crud.php',
 			type: 'POST',
-			data: {woeId: id, type: 'del'},
+			data: {woeId: id, type: 'del', data_class: 'Favourite'},
 			dataType: 'json',
 			success: function(response){
 				if(response.success){

@@ -26,7 +26,29 @@ class Favourite {
 			
 			echo json_encode($response);
 		}
-
+	}
+	
+	public function add($data){
+		$checkQuery = 'SELECT * FROM favourites WHERE woeid = ' . $data['woeId'];
+		$check = mysql_query($checkQuery);
+		$row = mysql_fetch_array($check);
+		
+		if(!$row){
+			$query = 'INSERT INTO favourites (location, woeid) VALUES("' . $data['location'] . '", ' . $data['woeId'] . ')';
+			mysql_query($query) or die('Couldnt save!');
+		} else {
+			$response = array(
+				'success' => false,
+				'exists' => true
+			);
+			return json_encode($response);
+			die();
+		}
+	}
+	
+	public function delete($data){
+		$query = 'DELETE FROM favourites WHERE woeid = ' . $data['woeId'];
+		mysql_query($query) or die('Couldnt delete!');
 	}
 
 }
