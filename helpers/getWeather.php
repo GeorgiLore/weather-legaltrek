@@ -50,7 +50,7 @@
     
 	if(isset($_POST['woeId'])){
 		ob_start();
-		include "weather-box.html";
+		include "../templates/weather-box.html";
 		$content = ob_get_contents();
 		ob_end_clean();
 		

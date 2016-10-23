@@ -1,6 +1,6 @@
 <?php
 
-include('dbconnect.php');
-include('getWeather.php');
-include('getLocations.php');
-include('layout.html');
+include('models/dbconnect.php');
+include('helpers/getWeather.php');
+include('models/getLocations.php');
+include('templates/layout.html');

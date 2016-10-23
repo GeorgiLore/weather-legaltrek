@@ -12,7 +12,7 @@ if($queryConn){
 	}
 
 	ob_start();
-	include "favourites-list.html";
+	include "../templates/favourites-list.html";
 	$content = ob_get_contents();
 	ob_end_clean();
 	

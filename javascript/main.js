@@ -1,6 +1,6 @@
 function getFaves(){
 	$.ajax({
-		url: 'getFavourites.php',
+		url: 'models/getFavourites.php',
 		type: 'POST',
 		dataType: 'json',
 		success: function(response){
@@ -11,7 +11,7 @@ function getFaves(){
 
 function changeMainWeather(id){
 	$.ajax({
-		url: 'getWeather.php',
+		url: 'helpers/getWeather.php',
 		type: 'POST',
 		data: {woeId: id},
 		dataType: 'json',
@@ -40,7 +40,7 @@ $(document).ready(function(){
 		var id = $('#location').val();
 		var location = $('#location option:selected').text();
 		$.ajax({
-			url: 'favourites-add-delete.php',
+			url: 'models/favourites-add-delete.php',
 			type: 'POST',
 			data: {woeId: id, location: location, type: 'add'},
 			dataType: 'json',
@@ -57,7 +57,7 @@ $(document).ready(function(){
 	$(document).on('click', '.delFav', function(){
 		var id = $(this).attr('woeid');
 		$.ajax({
-			url: 'favourites-add-delete.php',
+			url: 'models/favourites-add-delete.php',
 			type: 'POST',
 			data: {woeId: id, type: 'del'},
 			dataType: 'json',
