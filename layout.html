@@ -12,10 +12,9 @@
 			<div style='clear: both;'></div>			
 			<div id="locations">
 				<select id="location">
-					<option <?php echo ($woeId == '839722')?'selected':''; ?> value='839722'>Sofia</option>
-					<option <?php echo ($woeId == '2379574')?'selected':''; ?> value='2379574'>Chicago</option>
-					<option <?php echo ($woeId == '615702')?'selected':''; ?> value='615702'>Paris</option>
-					<option <?php echo ($woeId == '1118370')?'selected':''; ?> value='1118370'>Tokyo</option>
+					<?php foreach($locations as $location){ ?>
+					<option <?php echo ($woeId == $location['woeid'])?'selected':''; ?> value='<?php echo $location['woeid']; ?>'><?php echo $location['name']; ?></option>
+					<?php } ?>
 				</select>
 				<button id='addFav'>
 					Add to Favourites

@@ -1,7 +1,7 @@
 <h2>Favourites</h2>
 <?php foreach($result as $item){ ?>
 <div style="float: left; width: 100px; height: 20px;">
-	<a href="javascript: void(0);" class="fave-location" woeid="<?php echo $item['woeid']; ?>"><?php echo $item['location']; ?></a>
+	<a href="javascript: void(0);" class="favourite-location" woeid="<?php echo $item['woeid']; ?>"><?php echo $item['location']; ?></a>
 </div>
 <div style="float: left; height: 20px; padding-top: 3px;">
 	<a href="javascript: void(0);" class='delFav' woeid="<?php echo $item['woeid']; ?>" title="Remove from Favourites">X</a><br/>
